@@ -23,13 +23,11 @@ import scipy.io
 batch_size = 128
 epochs = 100
 
-fold = sys.argv[1]
-
 ################################################################################
 ################################ LOAD DATA #####################################
 ################################################################################
 
-dir_name = f"/media/mhlee/Data/GASE_Scale/processed_data/GASE_LOOCVwControls/{fold}/"
+dir_name = f"/path/to/sample_data/"
 print(f"Directory name is: {dir_name}")
 
 # load train data
@@ -281,17 +279,17 @@ RN_model.compile(optimizer=adam, loss='mse', metrics=['mae','mape'])
 history = RN_model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs, callbacks=callbacks_list)
 
 # Save the trained Model weights
-save_weights_name = f"/media/mhlee/Data/GASE_Scale/processed_data/GASE_LOOCVwControls/{fold}/leaky_upper_triang_RN_model_GASE.weights.h5"
+save_weights_name = f"/path/to/sample_data/leaky_upper_triang_RN_model_GASE.weights.h5"
 RN_model.save_weights(save_weights_name)
 
 # Save the model architecture
-save_arch_name = f"/media/mhlee/Data/GASE_Scale/processed_data/GASE_LOOCVwControls/{fold}/leaky_upper_triang_RN_model_GASE_arch.json"
+save_arch_name = f"/path/to/sample_data/leaky_upper_triang_RN_model_GASE_arch.json"
 with open(save_arch_name,'w') as f:
     f.write(RN_model.to_json())
 
 # Save the training loss
 train_loss_GASE = history.history['loss']
-np.save(f"/media/mhlee/Data/GASE_Scale/processed_data/GASE_LOOCVwControls/{fold}/train_loss_leaky_dilate_CNN_RN_GASE",train_loss_GASE)
+np.save(f"/path/to/sample_data/train_loss_leaky_dilate_CNN_RN_GASE",train_loss_GASE)
 
 # Print Results
 y_train_pred = RN_model.predict(x_train)
@@ -315,10 +313,10 @@ y_test_pred_flat = y_test_pred.flatten()  # or y_test_pred.ravel()
 # Print Results
 print(f'Train mae: {np.mean(np.abs(y_train - y_train_pred)):.2f}, Train sdae: {np.std(np.abs(y_train - y_train_pred)):.2f}, Train corr: {train_corr_coef:.2f}, Train p-value: {train_p:.2f}')
 
-file_name = f"/media/mhlee/Data/GASE_Scale/processed_data/GASE_LOOCVwControls/{fold}/y_train_pred_{fold}.mat"
+file_name = f"/path/to/sample_data/y_train_pred_sample_data.mat"
 scipy.io.savemat(file_name, {'y_train_pred': y_train_pred})
 
-file_name = f"/media/mhlee/Data/GASE_Scale/processed_data/GASE_LOOCVwControls/{fold}/y_test_pred_{fold}.mat"
+file_name = f"/path/to/sample_data/y_test_pred_sample_data.mat"
 scipy.io.savemat(file_name, {'y_test_pred': y_test_pred})
 
 
