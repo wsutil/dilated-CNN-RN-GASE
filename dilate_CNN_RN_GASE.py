@@ -23,14 +23,10 @@ import scipy.io
 batch_size = 128
 epochs = 100
 
-################################################################################
 ################################ LOAD DATA #####################################
-################################################################################
 
 dir_name = f"/path/to/sample_data/"
 print(f"Directory name is: {dir_name}")
-
-# load train data
 
 fname = 'x_train_gase_scale.mat'
 filename = os.path.join(os.getcwd(),dir_name,fname)
@@ -42,7 +38,6 @@ filename = os.path.join(os.getcwd(),dir_name,fname)
 y_train_mat = sio.loadmat(filename)['Y_Train']
 y_train_mat = np.float32(y_train_mat)
 
-# load test data
 fname = 'x_test_gase_scale.mat'
 filename = os.path.join(os.getcwd(),dir_name,fname)
 x_test_mat = sio.loadmat(filename)['X_Test']
@@ -58,7 +53,6 @@ print('x_test_shape:',x_test_mat.shape)
 
 print('y_train_shape:',y_train_mat.shape)
 print('y_test_shape:',y_test_mat.shape)
-
 
 # Form training and testing data
 x_train = np.zeros((x_train_mat.shape[2],115,115,1),dtype=np.float32)
@@ -82,10 +76,7 @@ for i in range(x_test_mat.shape[2]):
     x_test[i,:,:,0] = temp
     y_test[i,0] = y_test_mat[i,0]
     
-
-##################################################################################
 ############################### DEFINE RN MODEL ##################################
-##################################################################################
 
 # Reshape input
 print(x_train.shape)
@@ -124,7 +115,6 @@ def ConvolutionNetworks(no_filters=32, kernel_size=3, stride_size=1):
         return model
     return conv
 
-
 # Define function to compute relations from objects - the following uses just 4 Lambda layers - O(n^2) time complexity
 def compute_relations(objects):
     
@@ -162,8 +152,7 @@ def compute_relations(objects):
     concat = Concatenate()
     for feature1 in features:
         for feature2 in features:
-            relations.append(concat([feature1,feature2]))
-                    
+            relations.append(concat([feature1,feature2]))                  
             
     return relations
 
@@ -211,7 +200,6 @@ def g_theta(units=512, layers=4):
 def get_MLP():
     return g_th()
 
-
 # Define the main RN
     
 def RelationNetworks(objects):
@@ -246,7 +234,6 @@ def build_tag(conv):
     
     return Input(tensor=tag)
 
-
 input_img = Input((x_train.shape[1], x_train.shape[2], 1))  
 img_after_conv = ConvolutionNetworks()(input_img) 
 
@@ -256,9 +243,7 @@ img_out = Dense(1, activation='linear')(img_after_RN)
 
 RN_model = Model(inputs=[input_img], outputs=img_out)
 
-###################################################################################
 ############################# MODEL COMPILATION ###################################
-###################################################################################
 
 def step_decay(epoch):
     initial_lrate = 0.0001
@@ -318,8 +303,3 @@ scipy.io.savemat(file_name, {'y_train_pred': y_train_pred})
 
 file_name = f"/path/to/sample_data/y_test_pred_sample_data.mat"
 scipy.io.savemat(file_name, {'y_test_pred': y_test_pred})
-
-
-
-
-
