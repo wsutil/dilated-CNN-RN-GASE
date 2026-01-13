@@ -10,7 +10,10 @@ Results: The dilated DCNN+RN outperformed other state-of-the art methods to crea
 Interpretation: The proposed biomarker shows strong potential for early identification of DRE children at risk of neurocognitive impairments, enabling timely, personalized interventions to prevent long-term effects.
 
 ## Reference
+'''md
 If you use this work, please cite our paper:
 
-J.W. Jeong, M.H. Lee, H. Uda, Y.H. Hwang, M. Behen, A. Luat, C. Juhasz, E. Asano, Diffusion Tractography Biomarker for Epilepsy Severity in Children With Drug-Resistant Epilepsy. Ann Clin Transl Neurol 2025. https://doi.org/10.1002/acn3.70217
-
+@article{Jeong2025,
+title{},
+year{}
+}
