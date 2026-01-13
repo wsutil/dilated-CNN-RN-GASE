@@ -9,4 +9,4 @@ Methods: DRE children and age-sex-matched healthy controls were enrolled to cons
 Results: The dilated DCNN+RN outperformed other state-of-the art methods to create the predicted GASE scores with significant correlation (r = 0.92 and 0.83 for development and test sets with clinical GASE scores) and minimal overfitting (r = −0.25 and 0.00 for development and test sets with random GASE scores). Both univariate and multivariate models demonstrated that compared with the clinical GASE scores, the predicted GASE scores provide better model fit and discriminatory ability, suggesting more adjusted and accurate estimate of epilepsy severity contributing to the overall risk. 
 Interpretation: The proposed biomarker shows strong potential for early identification of DRE children at risk of neurocognitive impairments, enabling timely, personalized interventions to prevent long-term effects.
 
-@cite{}
+@article{}
