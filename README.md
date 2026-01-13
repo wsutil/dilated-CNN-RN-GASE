@@ -1,1 +1,1 @@
-# dilated deep convolutional neural network with a relational network
+# dilated-CNN-RN-GASE
