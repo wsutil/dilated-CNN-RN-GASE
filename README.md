@@ -10,9 +10,9 @@ Results: The dilated DCNN+RN outperformed other state-of-the art methods to crea
 Interpretation: The proposed biomarker shows strong potential for early identification of DRE children at risk of neurocognitive impairments, enabling timely, personalized interventions to prevent long-term effects.
 
 ## Reference
-'''md
+```md
 If you use this work, please cite our paper:
-
+```bibtex
 @article{Jeong2025,
 title{},
 year{}
