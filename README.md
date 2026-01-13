@@ -11,4 +11,6 @@ Interpretation: The proposed biomarker shows strong potential for early identifi
 
 ## Reference
 If you use this work, please cite our paper:
-'''bibtex
+
+J.W. Jeong, M.H. Lee, H. Uda, Y.H. Hwang, M. Behen, A. Luat, C. Juhasz, E. Asano, Diffusion Tractography Biomarker for Epilepsy Severity in Children With Drug-Resistant Epilepsy. Ann Clin Transl Neurol 2025. https://doi.org/10.1002/acn3.70217
+
