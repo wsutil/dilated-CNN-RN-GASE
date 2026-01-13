@@ -12,9 +12,9 @@ Interpretation: The proposed biomarker shows strong potential for early identifi
 ## Reference
 ```md
 If you use this work, please cite our paper:
+
 ```bibtex
 @article{Jeong2025,
-
 title={Diffusion Tractography Biomarker for Epilepsy Severity in Children With Drug-Resistant Epilepsy},
 author={Jeong, Jeong-Won and Lee, Min-Hee and Uda, Hiroshi and Hwang, Yoon Ho and Behen, Michael and Luat, Aimee and Juhász, Csaba and Asano, Eishi},
 journal={Annals of Clinical and Translational Neurology},
