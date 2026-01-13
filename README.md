@@ -15,11 +15,11 @@ If you use this work, please cite our papers. For the base model and prior work,
 
 ```bibtex
 @article{Jeong2025,
-title={Diffusion Tractography Biomarker for Epilepsy Severity in Children With Drug-Resistant Epilepsy},
-author={Jeong, Jeong-Won and Lee, Min-Hee and Uda, Hiroshi and Hwang, Yoon Ho and Behen, Michael and Luat, Aimee and Juhász, Csaba and Asano, Eishi},
-journal={Annals of Clinical and Translational Neurology},
-year={2025},
-doi={10.1002/acn3.70217}
+  title={Diffusion Tractography Biomarker for Epilepsy Severity in Children With Drug-Resistant Epilepsy},
+  author={Jeong, Jeong-Won and Lee, Min-Hee and Uda, Hiroshi and Hwang, Yoon Ho and Behen, Michael and Luat, Aimee and Juhász, Csaba and Asano, Eishi},
+  journal={Annals of Clinical and Translational Neurology},
+  year={2025},
+  doi={10.1002/acn3.70217}
 }
 
 @article{banerjee2021,
@@ -30,5 +30,5 @@ doi={10.1002/acn3.70217}
   number={3},
   pages={793--804},
   year={2021},
-doi={10.1109/TMI.2020.3036933}
+  doi={10.1109/TMI.2020.3036933}
 }
